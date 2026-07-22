@@ -14,9 +14,14 @@
       whatsapp: "https://wa.me/15488764427",
       telegram: "https://t.me/Armen_rabota"
     };
+	
+	window.JOB_CHANNELS = {
+    whatsapp: false,  // false — отключить WhatsApp
+    telegram: true   // false — отключить Telegram
+  };
   </script>
 
- <!-- Meta Pixelфф Code -->
+  <!-- Meta Pixelфф Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -682,7 +687,6 @@ src="https://www.facebook.com/tr?id=1337239647902238&ev=PageView&noscript=1"
       bottom: -70px;
       color: rgba(255,255,255,.05);
       font-size: 13rem;
-      pointer-events: none;
     }
 
     .roles-intro h2 {
@@ -1050,7 +1054,6 @@ src="https://www.facebook.com/tr?id=1337239647902238&ev=PageView&noscript=1"
       height: 350px;
       border: 55px solid rgba(255,255,255,.035);
       border-radius: 50%;
-      pointer-events: none;
     }
 
     .final h2 {
@@ -1094,206 +1097,6 @@ src="https://www.facebook.com/tr?id=1337239647902238&ev=PageView&noscript=1"
 
     .mobile-bar {
       display: none;
-    }
-
-    /* WhatsApp выключен флагом WA_ENABLED=false */
-    .wa-off {
-      opacity: .35;
-      filter: grayscale(1);
-      pointer-events: none;
-      cursor: not-allowed;
-    }
-
-    /* ── Dream calculator ── */
-    .dreamcalc {
-      max-width: 760px;
-      margin-inline: auto;
-      padding: 30px 28px;
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 26px;
-      box-shadow: var(--shadow);
-    }
-
-    .dreamcalc-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-
-    .dreamcalc-label {
-      color: var(--muted);
-      font-size: .85rem;
-      font-weight: 600;
-    }
-
-    .dreamcalc-months {
-      color: var(--navy);
-      font-size: 1.05rem;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    .dreamcalc input[type="range"] {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 100%;
-      height: 8px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, var(--saffron), var(--green));
-      outline: none;
-      cursor: pointer;
-    }
-
-    .dreamcalc input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 27px;
-      height: 27px;
-      border-radius: 50%;
-      background: white;
-      border: 3px solid var(--saffron);
-      box-shadow: 0 4px 14px rgba(23,38,83,.25);
-      transition: box-shadow .2s;
-    }
-
-    .dreamcalc input[type="range"]::-webkit-slider-thumb:hover {
-      box-shadow: 0 0 0 7px rgba(245,139,34,.18), 0 4px 14px rgba(23,38,83,.25);
-    }
-
-    .dreamcalc input[type="range"]::-moz-range-thumb {
-      width: 27px;
-      height: 27px;
-      border-radius: 50%;
-      background: white;
-      border: 3px solid var(--saffron);
-      box-shadow: 0 4px 14px rgba(23,38,83,.25);
-    }
-
-    .dreamcalc-out {
-      margin: 24px 0 6px;
-      text-align: center;
-    }
-
-    .dreamcalc-usd {
-      color: var(--navy);
-      font: 800 clamp(2.3rem, 7.5vw, 3.4rem)/1 "Manrope", sans-serif;
-      letter-spacing: -.03em;
-    }
-
-    .dreamcalc-usd small {
-      display: block;
-      margin-top: 8px;
-      color: var(--muted);
-      font: 600 .76rem/1.4 "Noto Sans Devanagari", "Manrope", sans-serif;
-      letter-spacing: 0;
-    }
-
-    .dreamcalc-inr {
-      margin-top: 8px;
-      color: var(--green);
-      font-size: 1.08rem;
-      font-weight: 800;
-    }
-
-    .dreamgrid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-top: 24px;
-    }
-
-    .dreamitem {
-      padding: 15px 10px 13px;
-      text-align: center;
-      background: var(--cream);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      filter: grayscale(1);
-      opacity: .45;
-      transition: filter .5s, opacity .5s, border-color .5s, background .5s, transform .5s;
-    }
-
-    .dreamitem i {
-      display: block;
-      font-style: normal;
-      font-size: 1.6rem;
-      margin-bottom: 6px;
-    }
-
-    .dreamitem strong {
-      display: block;
-      color: var(--navy);
-      font-size: .74rem;
-      line-height: 1.35;
-    }
-
-    .dreamitem small {
-      display: block;
-      margin-top: 3px;
-      color: var(--muted);
-      font-size: .64rem;
-      font-weight: 700;
-    }
-
-    .dreamitem.on {
-      filter: none;
-      opacity: 1;
-      background: var(--saffron-soft);
-      border-color: rgba(245,139,34,.45);
-      transform: translateY(-3px);
-    }
-
-    .dreamitem.on i {
-      animation: dreampop .5s cubic-bezier(.2,1.4,.4,1);
-    }
-
-    @keyframes dreampop {
-      0% { transform: scale(.6) }
-      70% { transform: scale(1.25) }
-      100% { transform: scale(1) }
-    }
-
-    .dreamitem.on small {
-      color: var(--saffron);
-    }
-
-    .dreamcalc-note {
-      margin-top: 16px;
-      text-align: center;
-      color: var(--muted);
-      font-size: .7rem;
-      line-height: 1.6;
-    }
-
-    .dreamcalc-cta {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      min-height: 52px;
-      margin-top: 18px;
-      color: white;
-      background: var(--green);
-      border-radius: 14px;
-      box-shadow: 0 14px 30px rgba(19,139,89,.22);
-      text-decoration: none;
-      font-weight: 800;
-      transition: transform .2s, box-shadow .2s;
-    }
-
-    .dreamcalc-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 40px rgba(19,139,89,.3);
-    }
-
-    @media (max-width: 560px) {
-      .dreamgrid {
-        grid-template-columns: repeat(2, 1fr);
-      }
     }
 
     .reveal {
@@ -1551,7 +1354,7 @@ src="https://www.facebook.com/tr?id=1337239647902238&ev=PageView&noscript=1"
         </div>
 
         <a
-          class="nav-cta js-whatsapp js-smart"
+          class="nav-cta js-whatsapp js-contact-fallback"
           href="#"
           target="_blank"
           rel="noopener"
@@ -1869,123 +1672,6 @@ src="https://www.facebook.com/tr?id=1337239647902238&ev=PageView&noscript=1"
     </section>
 
     <section class="section">
-      <div class="shell">
-        <div class="section-head center reveal">
-          <span
-            class="label"
-            data-hi="सपनों का कैलकुलेटर"
-            data-en="Dream calculator"
-          >सपनों का कैलकुलेटर</span>
-
-          <h2
-            data-hi="कुछ महीनों की मेहनत से क्या-क्या संभव है?"
-            data-en="What could a few months of work make possible?"
-          >कुछ महीनों की मेहनत से क्या-क्या संभव है?</h2>
-
-          <p
-            data-hi="स्लाइडर खिसकाएँ और देखें — जब रहना और भोजन नियोक्ता देता है, तो बचत तेज़ी से बढ़ती है।"
-            data-en="Move the slider and see — when the employer covers stay and meals, savings grow fast."
-          >स्लाइडर खिसकाएँ और देखें — जब रहना और भोजन नियोक्ता देता है, तो बचत तेज़ी से बढ़ती है।</p>
-        </div>
-
-        <div class="dreamcalc reveal">
-          <div class="dreamcalc-row">
-            <span
-              class="dreamcalc-label"
-              data-hi="विदेश में काम के महीने"
-              data-en="Months working abroad"
-            >विदेश में काम के महीने</span>
-
-            <span class="dreamcalc-months">
-              <span id="calcMonths">4</span>
-              <span data-hi="महीने" data-en="months">महीने</span>
-            </span>
-          </div>
-
-          <input
-            type="range"
-            id="calcRange"
-            min="1"
-            max="12"
-            step="1"
-            value="4"
-            aria-label="Months working abroad"
-          >
-
-          <div class="dreamcalc-out">
-            <div class="dreamcalc-usd">
-              $<span id="calcUsd">6 000</span>
-              <small
-                data-hi="अनुमानित बचत · उदाहरण: $1,500/माह बचत मानकर"
-                data-en="Estimated savings · example based on saving $1,500/month"
-              >अनुमानित बचत · उदाहरण: $1,500/माह बचत मानकर</small>
-            </div>
-
-            <div class="dreamcalc-inr">≈ ₹<span id="calcInr">5,28,000</span></div>
-          </div>
-
-          <div class="dreamgrid" id="dreamGrid">
-            <div class="dreamitem" data-need="1">
-              <i>📱</i>
-              <strong data-hi="नया स्मार्टफोन" data-en="New smartphone">नया स्मार्टफोन</strong>
-              <small data-hi="1 महीना" data-en="1 month">1 महीना</small>
-            </div>
-
-            <div class="dreamitem" data-need="2">
-              <i>🏍️</i>
-              <strong data-hi="अपनी बाइक" data-en="Your own bike">अपनी बाइक</strong>
-              <small data-hi="2 महीने" data-en="2 months">2 महीने</small>
-            </div>
-
-            <div class="dreamitem" data-need="4">
-              <i>🚗</i>
-              <strong data-hi="कार" data-en="A car">कार</strong>
-              <small data-hi="4 महीने" data-en="4 months">4 महीने</small>
-            </div>
-
-            <div class="dreamitem" data-need="6">
-              <i>🏠</i>
-              <strong data-hi="परिवार के लिए पक्का घर" data-en="Pakka house for family">परिवार के लिए पक्का घर</strong>
-              <small data-hi="6 महीने" data-en="6 months">6 महीने</small>
-            </div>
-
-            <div class="dreamitem" data-need="9">
-              <i>👨‍🎓</i>
-              <strong data-hi="बच्चों की पढ़ाई" data-en="Children's education">बच्चों की पढ़ाई</strong>
-              <small data-hi="9 महीने" data-en="9 months">9 महीने</small>
-            </div>
-
-            <div class="dreamitem" data-need="12">
-              <i>💼</i>
-              <strong data-hi="अपना बिज़नेस" data-en="Your own business">अपना बिज़नेस</strong>
-              <small data-hi="12 महीने" data-en="12 months">12 महीने</small>
-            </div>
-          </div>
-
-          <div
-            class="dreamcalc-note"
-            data-hi="*यह केवल उदाहरण है। वास्तविक वेतन और बचत देश, भूमिका, duty hours और आपके खर्च पर निर्भर करती है — पूरी शर्तें लिखित ऑफ़र में जाँचें।"
-            data-en="*This is an example only. Actual pay and savings depend on country, role, duty hours and your expenses — check full terms in the written offer."
-          >*यह केवल उदाहरण है। वास्तविक वेतन और बचत देश, भूमिका, duty hours और आपके खर्च पर निर्भर करती है — पूरी शर्तें लिखित ऑफ़र में जाँचें।</div>
-
-          <a
-            class="dreamcalc-cta js-whatsapp js-smart"
-            href="#"
-            target="_blank"
-            rel="noopener"
-            data-channel="whatsapp"
-          >
-            <span>💬</span>
-            <span
-              data-hi="WhatsApp पर विकल्प पूछें"
-              data-en="Ask options on WhatsApp"
-            >WhatsApp पर विकल्प पूछें</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
       <div class="shell roles-layout">
         <div class="roles-intro reveal">
           <span
@@ -2223,7 +1909,7 @@ src="https://www.facebook.com/tr?id=1337239647902238&ev=PageView&noscript=1"
           </div>
 
           <a
-            class="js-whatsapp js-smart"
+            class="js-whatsapp js-contact-fallback"
             href="#"
             target="_blank"
             rel="noopener"
@@ -2371,7 +2057,7 @@ src="https://www.facebook.com/tr?id=1337239647902238&ev=PageView&noscript=1"
         </div>
 
         <a
-          class="cta js-whatsapp js-smart"
+          class="cta js-whatsapp"
           href="#"
           target="_blank"
           rel="noopener"
@@ -2421,12 +2107,6 @@ src="https://www.facebook.com/tr?id=1337239647902238&ev=PageView&noscript=1"
   </div>
 
   <script>
-    // ═══ WA toggle: true = кнопки WhatsApp работают, false = выключены ═══
-    // При false: кнопки с парной Telegram-кнопкой рядом (hero, мобильная панель)
-    // становятся серыми и некликабельными; одиночные кнопки (шапка, safety,
-    // финал, калькулятор) автоматически превращаются в Telegram-кнопки.
-    const WA_ENABLED = false;
-
     let currentLanguage =
       localStorage.getItem("udaan-language") === "en" ? "en" : "hi";
 
@@ -2440,36 +2120,19 @@ src="https://www.facebook.com/tr?id=1337239647902238&ev=PageView&noscript=1"
 
     function updateContactLinks() {
       const message = encodeURIComponent(contactMessage(currentLanguage));
-      const waHref = window.JOB_CONTACTS.whatsapp.split("?")[0] + "?text=" + message;
-      const tgHref = window.JOB_CONTACTS.telegram.split("?")[0] + "?text=" + message;
 
       document.querySelectorAll(".js-whatsapp").forEach(link => {
-        if (WA_ENABLED) {
-          link.classList.remove("wa-off");
-          link.href = waHref;
-        } else if (link.classList.contains("js-smart")) {
-          // одиночная кнопка: ведём в Telegram и меняем подпись/иконку
-          link.href = tgHref;
-          link.querySelectorAll("*").forEach(node => {
-            if (node.children.length === 0 && node.textContent) {
-              node.textContent = node.textContent
-                .replace(/WhatsApp/g, "Telegram")
-                .replace(/💬/g, "✈️");
-            }
-          });
-          if (link.children.length === 0) {
-            link.textContent = link.textContent
-              .replace(/WhatsApp/g, "Telegram")
-              .replace(/💬/g, "✈️");
-          }
-        } else {
-          link.classList.add("wa-off");
-          link.removeAttribute("href");
-        }
+        link.href =
+          window.JOB_CONTACTS.whatsapp.split("?")[0] +
+          "?text=" +
+          message;
       });
 
       document.querySelectorAll(".js-telegram").forEach(link => {
-        link.href = tgHref;
+        link.href =
+          window.JOB_CONTACTS.telegram.split("?")[0] +
+          "?text=" +
+          message;
       });
     }
 
@@ -2578,64 +2241,756 @@ src="https://www.facebook.com/tr?id=1337239647902238&ev=PageView&noscript=1"
       });
     });
 
-    // ═══ Dream calculator ═══
-    (function () {
-      const MONTHLY_SAVING = 1500; // примерное накопление в $/месяц — поменять при необходимости
-      const INR_RATE = 88;         // курс рупии к доллару
+    setLanguage(currentLanguage);
+  </script>
+  <style>
+  .passport-notice {
+    max-width: 650px;
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 13px;
+    align-items: center;
+    margin-top: 25px;
+    padding: 15px 17px;
+    color: var(--navy);
+    background: #fff3cf;
+    border: 1px solid rgba(245, 139, 34, .28);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(23, 38, 83, .07);
+  }
 
-      const range = document.getElementById("calcRange");
-      if (!range) return;
+  .passport-notice-icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    background: white;
+    border-radius: 13px;
+    font-size: 1.35rem;
+  }
 
-      const monthsEl = document.getElementById("calcMonths");
-      const usdEl = document.getElementById("calcUsd");
-      const inrEl = document.getElementById("calcInr");
-      const items = Array.from(document.querySelectorAll(".dreamitem"));
+  .passport-notice strong,
+  .passport-notice small {
+    display: block;
+  }
 
-      let current = 0;
-      let target = 0;
-      let animating = null;
+  .passport-notice strong {
+    font-size: .9rem;
+    line-height: 1.35;
+  }
 
-      function formatUsd(value) {
-        return String(Math.round(value)).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  .passport-notice small {
+    margin-top: 4px;
+    color: #59647b;
+    font-size: .73rem;
+    line-height: 1.5;
+  }
+
+  body.passport-sheet-open {
+    overflow: hidden;
+  }
+
+  .passport-gate {
+    position: fixed;
+    inset: 0;
+    z-index: 120;
+    display: grid;
+    place-items: end center;
+    padding: 18px 18px 0;
+  }
+
+  .passport-gate[hidden],
+  .passport-sheet-step[hidden] {
+    display: none;
+  }
+
+  .passport-backdrop {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: rgba(12, 20, 45, .58);
+    backdrop-filter: blur(5px);
+  }
+
+  .passport-sheet {
+    position: relative;
+    width: min(100%, 560px);
+    max-height: calc(100vh - 30px);
+    overflow-y: auto;
+    padding: 27px 24px calc(27px + env(safe-area-inset-bottom));
+    background: white;
+    border-radius: 28px 28px 0 0;
+    box-shadow: 0 -22px 70px rgba(12, 20, 45, .24);
+    animation: passport-sheet-in .28s ease-out;
+  }
+
+  @keyframes passport-sheet-in {
+    from {
+      opacity: 0;
+      transform: translateY(35px);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .passport-sheet-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    color: var(--muted);
+    background: #f4f5f8;
+    border: 0;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+
+  .passport-sheet-icon {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 16px;
+    background: var(--saffron-soft);
+    border-radius: 16px;
+    font-size: 1.55rem;
+  }
+
+  .passport-sheet-step.result .passport-sheet-icon {
+    background: #eaf0ff;
+  }
+
+  .passport-sheet h2 {
+    max-width: 430px;
+    margin: 0 42px 9px 0;
+    color: var(--navy);
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    line-height: 1.2;
+  }
+
+  .passport-sheet p {
+    margin: 0;
+    color: var(--muted);
+    font-size: .9rem;
+  }
+
+  .passport-result-extra {
+    margin-top: 10px !important;
+  }
+
+  .passport-sheet-options {
+    display: grid;
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .passport-sheet-button {
+    min-height: 54px;
+    padding: 11px 17px;
+    border-radius: 15px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .passport-sheet-button.yes {
+    color: white;
+    background: var(--green);
+    border: 1px solid var(--green);
+    box-shadow: 0 12px 28px rgba(19, 139, 89, .2);
+  }
+
+  .passport-sheet-button.no,
+  .passport-sheet-button.close-result {
+    color: var(--navy);
+    background: white;
+    border: 1px solid var(--line);
+  }
+
+  .passport-sheet-note {
+    margin-top: 12px !important;
+    text-align: center;
+    font-size: .72rem !important;
+  }
+
+  @media (min-width: 651px) {
+    .passport-gate {
+      place-items: center;
+      padding: 24px;
+    }
+
+    .passport-sheet {
+      padding: 30px;
+      border-radius: 28px;
+      box-shadow: 0 28px 90px rgba(12, 20, 45, .3);
+    }
+  }
+  
+   .channel-disabled {
+  opacity: .45 !important;
+  filter: grayscale(1);
+  pointer-events: none;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+ }
+ 
+  @media (prefers-reduced-motion: reduce) {
+    .passport-sheet {
+      animation: none;
+    }
+  }
+</style>
+
+
+ 
+<div class="passport-gate" id="passportGate" hidden>
+  <button
+    class="passport-backdrop"
+    type="button"
+    data-passport-close
+    aria-label="Close"
+  ></button>
+
+
+  <section
+    class="passport-sheet"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="passportQuestionTitle"
+  >
+    <button
+      class="passport-sheet-close"
+      type="button"
+      data-passport-close
+      aria-label="Close"
+    >×</button>
+
+    <div class="passport-sheet-step" id="passportQuestionStep">
+      <div class="passport-sheet-icon" aria-hidden="true">🛂</div>
+
+      <h2
+        id="passportQuestionTitle"
+        data-hi="क्या आपके पास वैध पासपोर्ट है?"
+        data-en="Do you have a valid passport?"
+      >क्या आपके पास वैध पासपोर्ट है?</h2>
+
+      <p
+        data-hi="विदेशी नौकरी के लिए आवेदन शुरू करने से पहले वैध पासपोर्ट होना जरूरी है।"
+        data-en="A valid passport is required before starting an overseas job application."
+      >विदेशी नौकरी के लिए आवेदन शुरू करने से पहले वैध पासपोर्ट होना जरूरी है।</p>
+
+      <div class="passport-sheet-options">
+        <button
+          class="passport-sheet-button yes"
+          id="passportYes"
+          type="button"
+          data-hi="हाँ, मेरे पास वैध पासपोर्ट है"
+          data-en="Yes, I have a valid passport"
+        >हाँ, मेरे पास वैध पासपोर्ट है</button>
+
+        <button
+          class="passport-sheet-button no"
+          id="passportNo"
+          type="button"
+          data-hi="नहीं / पासपोर्ट बन रहा है"
+          data-en="No / my passport is being processed"
+        >नहीं / पासपोर्ट बन रहा है</button>
+      </div>
+
+      <p
+        class="passport-sheet-note"
+        data-hi="केवल 1 छोटा सवाल · लगभग 5 सेकंड"
+        data-en="Only 1 quick question · about 5 seconds"
+      >केवल 1 छोटा सवाल · लगभग 5 सेकंड</p>
+    </div>
+
+    <div
+      class="passport-sheet-step result"
+      id="passportResultStep"
+      hidden
+    >
+      <div class="passport-sheet-icon" aria-hidden="true">📘</div>
+
+      <h2
+        data-hi="पहले पासपोर्ट तैयार करें"
+        data-en="Prepare your passport first"
+      >पहले पासपोर्ट तैयार करें</h2>
+
+      <p
+        data-hi="अभी आवेदन पूरा नहीं किया जा सकेगा, क्योंकि विदेशी नौकरी और वीज़ा प्रक्रिया के लिए वैध पासपोर्ट जरूरी है।"
+        data-en="The application cannot be completed yet because a valid passport is required for overseas work and the visa process."
+      >अभी आवेदन पूरा नहीं किया जा सकेगा, क्योंकि विदेशी नौकरी और वीज़ा प्रक्रिया के लिए वैध पासपोर्ट जरूरी है।</p>
+
+      <p
+        class="passport-result-extra"
+        data-hi="पासपोर्ट मिलने के बाद इस पेज पर वापस आएँ और अपनी प्रोफ़ाइल जाँचें।"
+        data-en="Return to this page after receiving your passport and check your profile."
+      >पासपोर्ट मिलने के बाद इस पेज पर वापस आएँ और अपनी प्रोफ़ाइल जाँचें।</p>
+
+      <div class="passport-sheet-options">
+        <button
+          class="passport-sheet-button close-result"
+          type="button"
+          data-passport-close
+          data-hi="ठीक है, समझ गया"
+          data-en="OK, I understand"
+        >ठीक है, समझ गया</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  (() => {
+    const gate = document.getElementById("passportGate");
+    const questionStep = document.getElementById("passportQuestionStep");
+    const resultStep = document.getElementById("passportResultStep");
+    const yesButton = document.getElementById("passportYes");
+    const noButton = document.getElementById("passportNo");
+
+    let pendingChannel = null;
+    let previousFocus = null;
+
+    function language() {
+      return document.documentElement.lang === "en" ? "en" : "hi";
+    }
+
+    function translatePassportElements() {
+      const lang = language();
+
+      document
+        .querySelectorAll(
+          ".passport-notice [data-hi][data-en], " +
+          "#passportGate [data-hi][data-en]"
+        )
+        .forEach(element => {
+          element.textContent = element.getAttribute("data-" + lang);
+        });
+    }
+
+    function setTranslatedText(element, hindi, english) {
+      if (!element) return;
+
+      element.setAttribute("data-hi", hindi);
+      element.setAttribute("data-en", english);
+      element.textContent = language() === "en" ? english : hindi;
+    }
+
+    function addPassportNotice() {
+      const actions = document.querySelector(".hero .actions");
+
+      if (!actions || document.querySelector(".passport-notice")) return;
+
+      actions.insertAdjacentHTML(
+        "beforebegin",
+        `
+          <div class="passport-notice">
+            <span class="passport-notice-icon" aria-hidden="true">🛂</span>
+
+            <span>
+              <strong
+                data-hi="आवेदन के लिए वैध पासपोर्ट जरूरी है"
+                data-en="A valid passport is required to apply"
+              >आवेदन के लिए वैध पासपोर्ट जरूरी है</strong>
+
+              <small
+                data-hi="केवल वैध पासपोर्ट वाले उम्मीदवार अभी उपलब्ध विदेशी नौकरियों के लिए आवेदन कर सकते हैं।"
+                data-en="Only candidates with a valid passport can currently apply for available overseas jobs."
+              >केवल वैध पासपोर्ट वाले उम्मीदवार अभी उपलब्ध विदेशी नौकरियों के लिए आवेदन कर सकते हैं।</small>
+            </span>
+          </div>
+        `
+      );
+    }
+
+    function updatePageCopy() {
+      const heroWhatsApp =
+        document.querySelector(".hero .js-whatsapp .cta-copy");
+
+      if (heroWhatsApp) {
+        setTranslatedText(
+          heroWhatsApp.querySelector(":scope > span"),
+          "पासपोर्ट है? WhatsApp पर आवेदन करें",
+          "Have a passport? Apply on WhatsApp"
+        );
+
+        setTranslatedText(
+          heroWhatsApp.querySelector("small"),
+          "1 छोटा सवाल · केवल 5 सेकंड",
+          "1 quick question · only 5 seconds"
+        );
       }
 
-      function formatInr(value) {
-        return Math.round(value).toLocaleString("en-IN");
+      const heroTelegram =
+        document.querySelector(".hero .js-telegram .cta-copy");
+
+      if (heroTelegram) {
+        setTranslatedText(
+          heroTelegram.querySelector(":scope > span"),
+          "Telegram पर जानकारी लें",
+          "Get details on Telegram"
+        );
+
+        setTranslatedText(
+          heroTelegram.querySelector("small"),
+          "वही पासपोर्ट जाँच लागू होगी",
+          "The same passport check applies"
+        );
       }
 
-      function tick() {
-        current += (target - current) * 0.18;
-        usdEl.textContent = formatUsd(current);
-        inrEl.textContent = formatInr(current * INR_RATE);
+      setTranslatedText(
+        document.querySelector(".nav-cta.js-whatsapp"),
+        "पासपोर्ट है? आवेदन करें",
+        "Have a passport? Apply"
+      );
 
-        if (Math.abs(target - current) > 0.8) {
-          animating = requestAnimationFrame(tick);
-        } else {
-          usdEl.textContent = formatUsd(target);
-          inrEl.textContent = formatInr(target * INR_RATE);
-          animating = null;
-        }
+      setTranslatedText(
+        document.querySelector(".mobile-whatsapp.js-whatsapp"),
+        "💬 पासपोर्ट है? आवेदन करें",
+        "💬 Have a passport? Apply"
+      );
+
+      setTranslatedText(
+        document.querySelector(".final .js-whatsapp [data-hi]"),
+        "पासपोर्ट है? WhatsApp पर आवेदन करें",
+        "Have a passport? Apply on WhatsApp"
+      );
+
+      const roleNote = document.querySelector(".role-note");
+
+      setTranslatedText(
+        roleNote,
+        "यदि आपके पास वैध पासपोर्ट है, तो अपनी उम्र, अनुभव और पसंदीदा काम WhatsApp पर भेजें — उपलब्ध विकल्प बताए जाएँगे।",
+        "If you have a valid passport, send your age, experience and preferred work on WhatsApp to see current options."
+      );
+
+      const processText = Array.from(
+        document.querySelectorAll("[data-en]")
+      ).find(element =>
+        element.getAttribute("data-en") ===
+        "Send your age, experience, passport status and preferred work on WhatsApp."
+      );
+
+      setTranslatedText(
+        processText,
+        "वैध पासपोर्ट होने पर अपनी उम्र, अनुभव और पसंदीदा काम WhatsApp पर साझा करें।",
+        "If you have a valid passport, share your age, experience and preferred work on WhatsApp."
+      );
+
+      const passportFaqQuestion = Array.from(
+        document.querySelectorAll(".faq-question [data-en]")
+      ).find(element =>
+        element.getAttribute("data-en") === "Do I need a passport?"
+      );
+
+      const passportFaqAnswer = passportFaqQuestion
+        ?.closest(".faq-item")
+        ?.querySelector(".faq-answer p");
+
+      setTranslatedText(
+        passportFaqAnswer,
+        "हाँ। उपलब्ध विदेशी नौकरियों के लिए आवेदन शुरू करने से पहले वैध पासपोर्ट आवश्यक है। यदि पासपोर्ट बन रहा है या renewal में है, तो तैयार होने के बाद इस पेज पर वापस आएँ।",
+        "Yes. A valid passport is required before applying for available overseas jobs. If yours is being issued or renewed, return after it is ready."
+      );
+    }
+
+    function prepareContactLinks() {
+      document
+        .querySelectorAll(".js-whatsapp, .js-telegram")
+        .forEach(link => {
+          const channel = link.classList.contains("js-telegram")
+            ? "telegram"
+            : "whatsapp";
+
+          link.dataset.channel = channel;
+          link.href = "#passport-check";
+          link.setAttribute("aria-haspopup", "dialog");
+        });
+    }
+
+    function track(eventName, parameters = {}) {
+      if (typeof fbq === "function") {
+        fbq("trackCustom", eventName, {
+          language: language(),
+          ...parameters
+        });
+      }
+    }
+
+    function resetGate() {
+      questionStep.hidden = false;
+      resultStep.hidden = true;
+    }
+
+    function openGate(channel, trigger) {
+      pendingChannel = channel;
+      previousFocus = trigger;
+
+      resetGate();
+      translatePassportElements();
+
+      gate.hidden = false;
+      document.body.classList.add("passport-sheet-open");
+
+      track("PassportCheckOpened", { channel });
+
+      requestAnimationFrame(() => yesButton.focus());
+    }
+
+    function closeGate(restoreFocus = true) {
+      gate.hidden = true;
+      document.body.classList.remove("passport-sheet-open");
+
+      if (restoreFocus && previousFocus) {
+        previousFocus.focus();
       }
 
-      function update() {
-        const months = Number(range.value);
-        monthsEl.textContent = months;
-        target = months * MONTHLY_SAVING;
+      pendingChannel = null;
+      previousFocus = null;
+      resetGate();
+    }
 
-        if (!animating) {
-          animating = requestAnimationFrame(tick);
-        }
+    function confirmationMessage() {
+      if (language() === "hi") {
+        return "नमस्ते! मेरे पास वैध पासपोर्ट है और मैं विदेश में नौकरी के विकल्प जानना चाहता/चाहती हूँ।";
+      }
 
-        items.forEach(item => {
-          item.classList.toggle("on", months >= Number(item.dataset.need));
+      return "Hello! I have a valid passport and would like to learn about overseas job options.";
+    }
+
+    function contactUrl(channel) {
+      const message = encodeURIComponent(confirmationMessage());
+
+      if (channel === "telegram") {
+        return (
+          window.JOB_CONTACTS.telegram.split("?")[0] +
+          "?text=" +
+          message
+        );
+      }
+
+      return (
+        window.JOB_CONTACTS.whatsapp.split("?")[0] +
+        "?text=" +
+        message
+      );
+    }
+
+document.addEventListener(
+  "click",
+  event => {
+    const trigger = event.target.closest(
+      ".js-whatsapp, .js-telegram"
+    );
+
+    if (!trigger || trigger.closest("#passportGate")) return;
+
+    const channel =
+      trigger.dataset.channel ||
+      (
+        trigger.classList.contains("js-telegram")
+          ? "telegram"
+          : "whatsapp"
+      );
+
+    if (
+      trigger.classList.contains("channel-disabled") ||
+      window.JOB_CHANNELS[channel] === false
+    ) {
+      event.preventDefault();
+      event.stopPropagation();
+      return;
+    }
+
+    event.preventDefault();
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+
+    openGate(channel, trigger);
+  },
+  true
+);
+
+    yesButton.addEventListener("click", () => {
+      if (!pendingChannel) return;
+
+      const channel = pendingChannel;
+      const url = contactUrl(channel);
+
+      track("PassportEligible", { channel });
+
+      if (typeof fbq === "function") {
+        fbq("track", "Contact", {
+          channel,
+          language: language(),
+          passport_confirmed: true
         });
       }
 
-      range.addEventListener("input", update);
-      update();
-    })();
+      closeGate(false);
+      window.open(url, "_blank", "noopener,noreferrer");
+    });
 
-    setLanguage(currentLanguage);
-  </script>
+    noButton.addEventListener("click", () => {
+      questionStep.hidden = true;
+      resultStep.hidden = false;
+
+      track("PassportNotReady", {
+        channel: pendingChannel
+      });
+
+      requestAnimationFrame(() => {
+        resultStep
+          .querySelector(".close-result")
+          .focus();
+      });
+    });
+
+    gate
+      .querySelectorAll("[data-passport-close]")
+      .forEach(button => {
+        button.addEventListener("click", () => closeGate());
+      });
+
+    document.addEventListener("keydown", event => {
+      if (gate.hidden) return;
+
+      if (event.key === "Escape") {
+        closeGate();
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+
+      const focusable = Array.from(
+        gate.querySelectorAll(
+          "button:not([hidden]), a[href]:not([hidden])"
+        )
+      ).filter(element => element.offsetParent !== null);
+
+      if (!focusable.length) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (
+        !event.shiftKey &&
+        document.activeElement === last
+      ) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+
+    document
+      .querySelectorAll(".language-button")
+      .forEach(button => {
+        button.addEventListener("click", () => {
+          setTimeout(() => {
+            translatePassportElements();
+            updatePageCopy();
+            prepareContactLinks();
+          }, 0);
+        });
+      });
+
+    addPassportNotice();
+    translatePassportElements();
+    updatePageCopy();
+    prepareContactLinks();
+	updateChannelAvailability();
+	
+    Array.from(document.body.childNodes).forEach(node => {
+      if (
+        node.nodeType === Node.TEXT_NODE &&
+        node.textContent.trim() === "а"
+      ) {
+        node.remove();
+      }
+    });
+function updateChannelAvailability() {
+  const whatsappEnabled =
+    window.JOB_CHANNELS.whatsapp !== false;
+
+  const telegramEnabled =
+    window.JOB_CHANNELS.telegram !== false;
+
+  function updateButton(button, enabled, channel) {
+    button.classList.toggle("channel-disabled", !enabled);
+    button.setAttribute("aria-disabled", String(!enabled));
+    button.dataset.channel = channel;
+
+    if (!enabled) {
+      button.href = "#";
+      button.removeAttribute("target");
+      button.tabIndex = -1;
+    } else {
+      button.href = "#passport-check";
+      button.setAttribute("target", "_blank");
+      button.tabIndex = 0;
+    }
+  }
+
+  // Обычные WhatsApp-кнопки блокируются полностью
+  document
+    .querySelectorAll(
+      ".js-whatsapp:not(.js-contact-fallback)"
+    )
+    .forEach(button => {
+      updateButton(
+        button,
+        whatsappEnabled,
+        "whatsapp"
+      );
+    });
+
+  // Обычные Telegram-кнопки
+  document
+    .querySelectorAll(".js-telegram")
+    .forEach(button => {
+      updateButton(
+        button,
+        telegramEnabled,
+        "telegram"
+      );
+    });
+
+  // Верхняя кнопка и Ask about terms:
+  // WhatsApp по умолчанию, Telegram как резерв
+  const fallbackEnabled =
+    whatsappEnabled || telegramEnabled;
+
+  const fallbackChannel = whatsappEnabled
+    ? "whatsapp"
+    : "telegram";
+
+  document
+    .querySelectorAll(".js-contact-fallback")
+    .forEach(button => {
+      updateButton(
+        button,
+        fallbackEnabled,
+        fallbackChannel
+      );
+    });
+}
+
+prepareContactLinks();
+updateChannelAvailability();
+  })();
+</script>
 </body>
 </html>
